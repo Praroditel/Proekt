@@ -20,10 +20,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction2 * рывок
 		
 	elif Input.is_action_pressed("ui_right"):
-		rivok_direction = Vector2.RIGHT
+		rivok_direction = Vector2.RIGHT 
 		velocity.x = direction2 * рывок
-		
-	
 
 	
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -54,6 +52,7 @@ func dach():#рывок
 		velocity = rivok_direction.normalized() * 2000
 		исп_рывок = false 
 		await get_tree().create_timer(2).timeout
+		print("5")
 		исп_рывок = true
 	 
 		
