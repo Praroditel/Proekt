@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://32h8438fgoq0"]
+[gd_scene load_steps=7 format=3 uid="uid://32h8438fgoq0"]
 
 [ext_resource type="Script" path="res://Mir.gd" id="1_o83cr"]
 [ext_resource type="Texture2D" uid="uid://5smd1wbwwtod" path="res://u+7kca.png" id="2_qt00n"]
 [ext_resource type="PackedScene" uid="uid://b3344ohd1675x" path="res://Slime.tscn" id="3_jder0"]
+[ext_resource type="Texture2D" uid="uid://ixj1ak18762o" path="res://1473685252276134903.jpg" id="4_2vo18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hhrvt"]
 texture = ExtResource("2_qt00n")
@@ -7194,6 +7195,13 @@ sources/0 = SubResource("TileSetAtlasSource_hhrvt")
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_o83cr")
 
+[node name="1473685252276134903" type="TextureRect" parent="."]
+offset_left = -1084.0
+offset_top = -589.0
+offset_right = 2251.0
+offset_bottom = 684.0
+texture = ExtResource("4_2vo18")
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_sy27c")
 format = 2
@@ -7201,3 +7209,5 @@ layer_0/tile_data = PackedInt32Array(2490375, 655360, 1, 2555911, 655360, 2, 249
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_jder0")]
 position = Vector2(-179, 357)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
