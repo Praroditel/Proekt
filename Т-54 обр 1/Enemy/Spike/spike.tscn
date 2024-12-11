@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfdpiqrmn2ng4"]
+
+[ext_resource type="Script" path="res://Enemy/Spike/spike.gd" id="1_x70n0"]
+[ext_resource type="Texture2D" uid="uid://dkmlr7byrbxx0" path="res://Enemy/Assets/Spike.png" id="2_fgiwo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dntul"]
+size = Vector2(16, 6)
+
+[node name="Spike" type="CharacterBody2D"]
+position = Vector2(50, 33)
+script = ExtResource("1_x70n0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1.5)
+scale = Vector2(1, 1.1875)
+texture = ExtResource("2_fgiwo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_dntul")
